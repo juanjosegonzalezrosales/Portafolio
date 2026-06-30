@@ -1,136 +1,118 @@
 /**
  * KINETIC_SYNTAX Developer Portfolio Engine
- * Author: Alex Rivera
+ * Author: Juan José González Rosales
  * Technology Stack: HTML5, CSS3, ES6 Vanilla JavaScript
  */
 
 // --- STATIC DATABASE ---
 const database = {
   personalInfo: {
-    name: "Alex Rivera",
-    title: "Senior Full-Stack Engineer",
-    subtitle: "Especializado en arquitecturas escalables",
-    bioShort: "Ingeniero de software especializado en el diseño de arquitecturas de sistemas resilientes, APIs de alta velocidad y experiencias frontend excepcionales. Enfocado en código limpio, modular y de alto rendimiento.",
+    name: "Juan José González Rosales",
+    title: "Desarrollador Junior FullStack",
+    subtitle: "Enfocado en desarrollo web, consola y automatización",
+    bioShort: "Desarrollador de software junior que ha elaborado proyectos en Python, HTML, CSS y Javascript enfocados en el desarrollo web, consola y automatización, ejecutando tareas en análisis, diseño, desarrollo y testeo.",
     bioLong: [
-      "Soy un ingeniero de software apasionado por resolver problemas complejos y construir soluciones que escalan. Con más de 5 años de trayectoria profesional, he diseñado soluciones que procesan miles de solicitudes por segundo, optimizando bases de datos y refinando interfaces interactivas para usuarios de todo el mundo.",
-      "Creo fervientemente en que el software excelente no es solo el que funciona, sino el que es legible, mantenible y robusto ante fallos. Mi filosofía de diseño se apoya en el minimalismo suizo, tipografías monoespaciadas legibles y la automatización extrema de procesos de integración continua."
+      "Soy Juan José González Rosales, un desarrollador de software junior apasionado por la lógica de programación y la creación de interfaces web interactivas y funcionales. Cuento con competencias en Python, Git, GitHub, HTML, CSS y Javascript, además de habilidades blandas clave como escucha activa, comunicación asertiva, trabajo en equipo, disciplina y prudencia.",
+      "Mi formación académica integra Ingeniería de Sistemas en la Universidad Pontificia Bolivariana, un programa Técnico Laboral en Desarrollo de Software en Campuslands, y estudios de dibujo técnico en el SENA. Mi enfoque está orientado al diseño de código estructurado, persistencia modular de datos y una atención minuciosa al detalle visual en el frontend."
     ],
     socials: {
-      github: "https://github.com/arivera-dev",
-      linkedin: "https://linkedin.com/in/alex-rivera-dev",
-      email: "alex.rivera@dev.io",
-      location: "Madrid, España"
+      github: "https://github.com/juanjosegonzalezrosales",
+      linkedin: "https://linkedin.com/in/juan-jose-gonzalez-rosales",
+      email: "juanjosegonzalezrosales@gmail.com",
+      location: "Floridablanca, Santander, Colombia"
     }
   },
   skills: [
     // Languages
-    { name: "TypeScript", category: "languages", proficiency: 95, icon: "code" },
-    { name: "JavaScript (ES6)", category: "languages", proficiency: 95, icon: "code" },
-    { name: "Go", category: "languages", proficiency: 80, icon: "terminal" },
-    { name: "Python", category: "languages", proficiency: 75, icon: "terminal" },
-    { name: "SQL (PostgreSQL)", category: "languages", proficiency: 88, icon: "database" },
+    { name: "Python", category: "languages", proficiency: 85, icon: "terminal" },
+    { name: "JavaScript", category: "languages", proficiency: 80, icon: "code" },
+    { name: "HTML", category: "languages", proficiency: 90, icon: "code" },
+    { name: "CSS", category: "languages", proficiency: 88, icon: "code" },
     
     // Frontend
-    { name: "React 19", category: "frontend", proficiency: 92, icon: "layers" },
-    { name: "Next.js", category: "frontend", proficiency: 90, icon: "layers" },
-    { name: "Tailwind CSS", category: "frontend", proficiency: 95, icon: "grid" },
-    { name: "D3.js", category: "frontend", proficiency: 75, icon: "binary" },
-    { name: "HTML5 & CSS3", category: "frontend", proficiency: 95, icon: "code" },
+    { name: "Desarrollo Web", category: "frontend", proficiency: 88, icon: "layers" },
+    { name: "Glassmorphic UI", category: "frontend", proficiency: 90, icon: "grid" },
+    { name: "Modo Oscuro & Estilos UX", category: "frontend", proficiency: 85, icon: "grid" },
 
-    // Backend & DB
-    { name: "Node.js (Express)", category: "backend", proficiency: 90, icon: "server" },
-    { name: "GraphQL & REST", category: "backend", proficiency: 88, icon: "refresh" },
-    { name: "Redis", category: "backend", proficiency: 82, icon: "database" },
-    { name: "Drizzle / Prisma", category: "backend", proficiency: 85, icon: "database" },
+    // Backend
+    { name: "Desarrollo en Consola", category: "backend", proficiency: 90, icon: "terminal" },
+    { name: "Modularidad & Lógica", category: "backend", proficiency: 88, icon: "server" },
+    { name: "Persistencia (JSON)", category: "backend", proficiency: 85, icon: "database" },
 
     // Tools & DevOps
-    { name: "Docker", category: "tools", proficiency: 85, icon: "box" },
-    { name: "Kubernetes", category: "tools", proficiency: 72, icon: "cloud" },
-    { name: "GitHub Actions", category: "tools", proficiency: 88, icon: "git" },
-    { name: "AWS (S3, EC2)", category: "tools", proficiency: 80, icon: "cloud" }
+    { name: "Git y GitHub", category: "tools", proficiency: 85, icon: "git" }
   ],
   projects: [
     {
-      id: "dataviz-pro",
-      title: "FinTrack Dashboard",
-      category: "fullstack",
-      featured: true,
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-      description: "Plataforma SaaS para la gestión financiera en tiempo real. Incluye un motor de agregación de cuentas bancarias de alta precisión, gráficos interactivos SVG de rendimiento diario y análisis predictivo de gastos futuros.",
-      extendedDescription: "FinTrack es una solución robusta de análisis de datos financieros capaz de procesar múltiples fuentes bancarias sincronizadas de forma concurrente. La interfaz está construida pensando en analistas, ofreciendo zoom dinámico, filtros por rango temporal y exportación nativa a formatos estructurados. Optimizado para tiempos de carga menores a 0.8s.",
-      tags: ["React", "Next.js", "D3.js", "PostgreSQL", "Redis"],
-      codeUrl: "https://github.com/arivera-dev/fintrack-dashboard"
-    },
-    {
-      id: "syntax-engine",
-      title: "Pulse API Gateway",
+      id: "academic-system",
+      title: "Simulación del Sistema Académico Campuslands",
       category: "backend",
       featured: true,
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
-      description: "Middleware proxy reverso de alto rendimiento procesando +10,000 req/s con autenticación JWT distribuida, limitación de tasa dinámica y telemetría integrada.",
-      extendedDescription: "Este proxy reverso actúa como una barrera de alto rendimiento para clústeres Kubernetes distribuidos. Diseñado en lenguaje Go para lograr la mínima latencia añadida, cuenta con rate-limiting distribuido gobernado por Redis y un sistema de cache de sesión criptográfica asimétrica.",
-      tags: ["Go", "Redis", "gRPC", "Docker", "Kubernetes"],
-      codeUrl: "https://github.com/arivera-dev/pulse-api-gateway"
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+      description: "Programa robusto desarrollado en Python para la gestión de estudiantes, docentes y administrativos mediante listas y diccionarios, con persistencia JSON.",
+      extendedDescription: "Programa desarrollado en Python, donde se realiza la gestión de estudiantes, docentes y administrativos mediante el uso de listas y diccionarios, manteniendo la persistencia de datos en archivos JSON y separando las responsabilidades de manera modular.",
+      tags: ["Python", "JSON", "Consola", "Modularidad"],
+      codeUrl: "#"
     },
     {
-      id: "nexus-storefront",
-      title: "Nexus Commerce",
+      id: "space-transport",
+      title: "Aplicación web conceptual de transporte espacial",
       category: "frontend",
-      featured: false,
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-      description: "Tienda online de comercio electrónico ultra-rápida. Enfocada en diseño minimalista, SEO técnico óptimo y soporte nativo sin conexión mediante Service Workers.",
-      extendedDescription: "Una experiencia de e-commerce que roza la perfección en optimización de Core Web Vitals (puntuación de 100/100 en Lighthouse). Implementa carrito de compras reactivo local, sincronización silenciosa y pasarela de pago optimizada.",
-      tags: ["React", "Tailwind CSS", "Vite", "TypeScript"],
-      codeUrl: "https://github.com/arivera-dev/nexus-commerce"
+      featured: true,
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+      description: "Diseño y maquetación interactiva enfocada en la experiencia de usuario, implementando estilos modernos como Glassmorphism y modo oscuro.",
+      extendedDescription: "Diseño desarrollado en HTML y CSS, donde se realiza la creación de una interfaz web para la simulación de viajes espaciales mediante un diseño enfocado en la experiencia de usuario, implementando estilos modernos como Glassmorphism y modo oscuro.",
+      tags: ["HTML5", "CSS3", "Glassmorphism", "Modo Oscuro", "UX/UI"],
+      codeUrl: "#"
     },
     {
-      id: "cloudmesh",
-      title: "CloudMesh Engine",
-      category: "infrastructure",
-      featured: false,
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-      description: "Infraestructura como Código (IaC) para el aprovisionamiento automatizado y securizado de clústeres multirregionales escalables de Kubernetes en entornos híbridos de nube.",
-      extendedDescription: "CloudMesh define recetas modulares de Terraform con alta tolerancia a fallos. Integra monitorización robusta con Prometheus y Grafana, alertas instantáneas automatizadas y configuraciones Zero-Trust Network.",
-      tags: ["Terraform", "AWS", "Prometheus", "Docker"],
-      codeUrl: "https://github.com/arivera-dev/cloudmesh-infra"
+      id: "martial-arts-ecommerce",
+      title: "Simulación de E-commerce de Artes Marciales",
+      category: "fullstack",
+      featured: true,
+      image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=800",
+      description: "Aplicación web de comercio electrónico con filtros, detalles y carrito de compras, sumado a un panel administrativo para gestionar categorías.",
+      extendedDescription: "Aplicación web desarrollada para un e-commerce de productos de artes marciales, donde se gestionan productos mediante un módulo cliente con filtros, detalles y carrito de compras, además de un módulo administrativo con dashboard para gestionar categorías y solicitudes.",
+      tags: ["JavaScript (ES6)", "HTML5", "CSS3", "Filtros", "Dashboard Admin"],
+      codeUrl: "#"
     }
   ],
   timeline: [
     {
       id: "t1",
-      role: "Senior Software Engineer",
-      organization: "Core Security Labs",
-      period: "2024 - Presente",
-      type: "experience",
-      description: "Lidero el diseño y desarrollo de pasarelas de seguridad cloud robustas, mejorando los tiempos de respuesta del API en un 35% y estableciendo flujos DevOps integrados para 12 microservicios críticos.",
-      skillsAcquired: ["Go", "Kubernetes", "Redis", "Zero-Trust", "Docker"]
+      role: "Técnico Laboral en Desarrollo de Software",
+      organization: "Campuslands, Floridablanca",
+      period: "Ene 2026 - Presente",
+      type: "education",
+      description: "Estudios intensivos orientados a la programación estructurada y orientada a objetos, metodologías ágiles, bases de datos y desarrollo web completo.",
+      skillsAcquired: ["Python", "JavaScript", "HTML", "CSS", "Git y GitHub"]
     },
     {
       id: "t2",
-      role: "Full-Stack Developer",
-      organization: "Tech Solutions Corp",
-      period: "2021 - 2024",
-      type: "experience",
-      description: "Desarrollé paneles administrativos reactivos de datos masivos. Lideré la migración completa de un backend monolítico heredado hacia microservicios desacoplados basados en Node.js.",
-      skillsAcquired: ["React", "Next.js", "TypeScript", "D3.js", "PostgreSQL"]
+      role: "Estudiante de Ingeniería de Sistemas",
+      organization: "Universidad Pontificia Universitaria UPB, Floridablanca",
+      period: "2024 - 2025",
+      type: "education",
+      description: "Estudios universitarios avanzados con énfasis en ingeniería, algoritmos, lógica computacional avanzada y diseño arquitectónico de bases de datos.",
+      skillsAcquired: ["Lógica", "Bases de Datos", "Algoritmia", "Estructura de Datos"]
     },
     {
       id: "t3",
-      role: "MSc Cloud Architecture",
-      organization: "Advanced Technology Institute",
-      period: "2023",
+      role: "Técnico en Dibujo Arquitectónico",
+      organization: "SENA, Floridablanca",
+      period: "2020 - 2021",
       type: "education",
-      description: "Programa de posgrado intensivo enfocado en computación en la nube distribuida, patrones de diseño de sistemas de alta disponibilidad y gestión de orquestación de contenedores.",
-      skillsAcquired: ["Kubernetes", "AWS", "IaC (Terraform)", "Seguridad Cloud"]
+      description: "Formación especializada en estructuración visual, modelado detallado y diseño de planos con un alto estándar de precisión técnica y orden.",
+      skillsAcquired: ["Diseño Técnico", "Atención al Detalle", "Planificación de Estructuras"]
     },
     {
       id: "t4",
-      role: "Graduado en Ingeniería de Software",
-      organization: "Universidad Politécnica de Madrid",
-      period: "2017 - 2021",
-      type: "education",
-      description: "Formación superior en fundamentos de la informática, algoritmos avanzados, paradigmas de programación (orientada a objetos y funcional), e ingeniería de requerimientos.",
-      skillsAcquired: ["Algoritmia", "Estructura de Datos", "SQL", "Patrones de Diseño"]
+      role: "Desarrollo de Proyectos Prácticos",
+      organization: "Campuslands",
+      period: "2026",
+      type: "experience",
+      description: "Diseño, maquetación y testeo de múltiples soluciones informáticas utilizando lenguajes puros y frameworks modernos bajo el ciclo de vida del software.",
+      skillsAcquired: ["Python", "HTML5", "CSS3", "Glassmorphism", "JSON"]
     }
   ]
 };
@@ -513,7 +495,7 @@ function initContactForm() {
   btnAutofill.addEventListener("click", () => {
     document.getElementById("name").value = "Elena Ramos";
     document.getElementById("email").value = "elena.ramos@talenttech.com";
-    document.getElementById("message").value = "Hola Alex, vi tu portafolio Kinetic Syntax y me impresionó la precisión técnica y la arquitectura limpia de tus proyectos. Me gustaría agendar una breve llamada de 15 minutos para conversar sobre un puesto de Senior Engineer.";
+    document.getElementById("message").value = "Hola Juan José, vi tu portafolio de Kinetic Syntax y me impresionó la precisión técnica y la modularidad de tus proyectos, en especial tu simulador de transporte espacial. Me gustaría agendar una breve llamada para conversar sobre una oportunidad como Desarrollador Junior FullStack.";
     
     // Clear error tags on autofill
     errorName.innerHTML = "";

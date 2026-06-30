@@ -1,4 +1,4 @@
-# KINETIC_SYNTAX — One Page Portfolio de Alex Rivera
+# KINETIC_SYNTAX — One Page Portfolio de Juan José González Rosales
 
 Un portafolio profesional de alto rendimiento y diseño minimalista diseñado para desarrolladores de software, ingenieros de sistemas y reclutadores técnicos. Este proyecto ha sido construido como una aplicación de una sola página (SPA) moderna utilizando **React 19**, **Vite**, **TypeScript**, **Tailwind CSS v4** y animaciones con **Motion**.
 
@@ -177,5 +177,5 @@ Los commits deben ser autodescriptivos e indicar la naturaleza del cambio:
 ## 🚀 Recomendaciones para Futuras Mejoras
 
 1. **Integración de API de Correo Real**: Sustituir el sistema de inbox simulado en local por un endpoint de backend real utilizando una API serverless (como Next.js API routes o Cloud Functions) conectada a servicios como SendGrid, Resend o EmailJS.
-2. **Sistema de Blog Técnico**: Implementar un lector de archivos Markdown dinámico para añadir una sección de artículos técnicos, reforzando la marca profesional de Alex Rivera.
+2. **Sistema de Blog Técnico**: Implementar un lector de archivos Markdown dinámico para añadir una sección de artículos técnicos, reforzando la marca profesional de Juan José González Rosales.
 3. **Métricas de Rendimiento (Analytics Custom)**: Integrar telemetría de rendimiento ligera (como el reporte de Core Web Vitals a un dashboard de monitoreo en la nube).
