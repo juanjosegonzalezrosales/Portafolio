@@ -1,13 +1,545 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Rivera | Portfolio Profesional — Kinetic Syntax</title>
+  
+  <!-- CSS Stylesheet link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- FIXED GLASSMORPHIC NAVBAR HEADER -->
+  <header class="header-nav" id="header">
+    <div class="container header-container">
+      <!-- Logo / Brand -->
+      <a href="#home" class="logo">
+        <span class="symbol">&lt;</span>
+        <span>KINETIC_SYNTAX</span>
+        <span class="symbol">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+          <li><a href="#skills" class="nav-link">Habilidades</a></li>
+          <li><a href="#projects" class="nav-link">Proyectos</a></li>
+          <li><a href="#experience" class="nav-link">Trayectoria</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop CTA Button -->
+      <div class="header-actions">
+        <button class="btn btn-outline btn-sm" id="header-resume-cta">
+          <i data-lucide="file-text" style="width: 14px; height: 14px;"></i> Curriculum
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger menu button -->
+      <button class="hamburger" aria-label="Abrir menú" id="hamburger-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER MENU AND BACKDROP -->
+  <div class="mobile-drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <span>Navegación</span>
+      <button class="drawer-close btn-scroll-top" style="border:none; background:none;">
+        <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#about" class="mobile-nav-link">Sobre Mí</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Habilidades</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Proyectos</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Trayectoria</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contacto</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-primary" id="drawer-resume-cta">
+        <i data-lucide="file-text" style="width: 14px; height: 14px;"></i> Interactive Resume
+      </button>
+      <p>Alex Rivera // Kinetic Syntax</p>
+    </div>
+  </div>
+
+  <!-- MAIN SECTIONS FLOW -->
+  <main>
+
+    <!-- HERO / HOME SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-meta">Hola, me llamo</p>
+          <h1 class="hero-title">ALEX RIVERA</h1>
+          <h2 class="hero-subtitle">Senior Full-Stack Engineer</h2>
+          <p class="hero-desc">
+            Ingeniero de software con un enfoque implacable en la arquitectura limpia, rendimiento sistémico y soluciones de alta escalabilidad. Construyendo el futuro de la web con precisión técnica.
+          </p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-primary">
+              Ver Proyectos <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline">Contactar</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-avatar-frame">
+            <div class="hero-avatar-inner">AR</div>
+            <span class="hero-avatar-tech hero-tech-1">TypeScript</span>
+            <span class="hero-avatar-tech hero-tech-2">React 19</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT MÍ / BENTO GRID SECTION -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-label">Sobre Mí</h2>
+        <h3 class="section-title">Quién es Alex Rivera</h3>
+        <p class="section-desc">Ingeniería de software con pasión por el código limpio, escalable y optimizado.</p>
+
+        <!-- Bento Layout -->
+        <div class="about-grid">
+          
+          <!-- Bio details card (Spans 8 cols) -->
+          <div class="bento-card bento-span-8 bento-profile-bio">
+            <h3 class="name">Alex Rivera</h3>
+            <p class="company">Senior Full-Stack Software Engineer</p>
+            <div class="paragraphs">
+              <p>Soy un ingeniero de software apasionado por resolver problemas de negocio complejos y construir soluciones que escalan. Con más de 5 años de trayectoria profesional, he diseñado soluciones distribuidas que procesan de manera asíncrona grandes volúmenes de datos, optimizando bases de datos SQL y NoSQL, y refinando interfaces interactivas para usuarios de todo el mundo.</p>
+              <p>Creo firmemente en que el software excelente no es solo el que funciona hoy, sino el que es legible, mantenible por un equipo y robusto ante fallos futuros. Mi filosofía de diseño técnico se apoya en patrones limpios y la automatización extrema de pipelines.</p>
+            </div>
+          </div>
+
+          <!-- Creative Visual Card (Spans 4 cols) -->
+          <div class="bento-card bento-span-4 bento-keyboard-card">
+            <!-- Mechanical Keyboard Visual background representation -->
+            <img class="bento-keyboard-bg" src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&q=80&w=800" alt="Teclado mecánico custom iluminado" referrerPolicy="no-referrer">
+            <div class="bento-keyboard-overlay"></div>
+            <div class="bento-keyboard-content">
+              <p class="label">Pilar Clave</p>
+              <h3 class="title">Arquitectura Resiliente</h3>
+            </div>
+          </div>
+
+          <!-- Value Pillar 1 (Spans 4 cols) -->
+          <div class="bento-card bento-span-4 bento-value-card">
+            <div class="bento-value-icon">
+              <i data-lucide="compass"></i>
+            </div>
+            <h3>Innovación</h3>
+            <p>Explorando constantemente los límites técnicos para integrar las mejores prácticas tecnológicas del mañana en sistemas estables del presente.</p>
+          </div>
+
+          <!-- Value Pillar 2 (Spans 4 cols) -->
+          <div class="bento-card bento-span-4 bento-value-card">
+            <div class="bento-value-icon">
+              <i data-lucide="cpu"></i>
+            </div>
+            <h3>Rendimiento</h3>
+            <p>Análisis de latencias, perfiles de memoria y optimización extrema para lograr experiencias fluidas y eficientes en servidores y clientes.</p>
+          </div>
+
+          <!-- Value Pillar 3 (Spans 4 cols) -->
+          <div class="bento-card bento-span-4 bento-value-card">
+            <div class="bento-value-icon">
+              <i data-lucide="refresh-cw"></i>
+            </div>
+            <h3>Agilidad</h3>
+            <p>Automatización de procesos complejos mediante CI/CD, permitiendo despliegues continuos rápidos, estables y sin fricciones de servicio.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL PROFICIENCY SECTION -->
+    <section id="skills" style="background-color: var(--surface-low);">
+      <div class="container">
+        
+        <!-- Header row with live search filters -->
+        <div class="skills-filter-container">
+          <div>
+            <h2 class="section-label">Technical Proficiency</h2>
+            <h3 class="section-title" style="margin-bottom:0;">Habilidades Clave</h3>
+          </div>
+          
+          <div class="search-wrapper">
+            <i data-lucide="search"></i>
+            <input type="text" id="skill-search" class="search-input" placeholder="Buscar habilidad técnica...">
+          </div>
+        </div>
+
+        <!-- Category switches tabs -->
+        <div class="skills-categories">
+          <button class="category-tab active" data-category="all">Todos</button>
+          <button class="category-tab" data-category="languages">Lenguajes</button>
+          <button class="category-tab" data-category="frontend">Frontend</button>
+          <button class="category-tab" data-category="backend">Backend</button>
+          <button class="category-tab" data-category="tools">DevOps & Herramientas</button>
+        </div>
+
+        <!-- Skills grid dynamic container -->
+        <div class="skills-grid" id="skills-grid" style="margin-top: var(--spacing-md);">
+          <!-- Content injected dynamically by script.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-label">Proyectos Destacados</h2>
+        <h3 class="section-title">Portafolio de Ingeniería</h3>
+        <p class="section-desc">Una selección de trabajos técnicos construidos de manera robusta, cubriendo frontend, backend e infraestructura.</p>
+
+        <!-- Category navigation tabs -->
+        <div class="projects-filter-bar">
+          <button class="project-tab active" data-category="all">Todos</button>
+          <button class="project-tab" data-category="fullstack">Full Stack</button>
+          <button class="project-tab" data-category="frontend">Frontend</button>
+          <button class="project-tab" data-category="backend">Backend</button>
+          <button class="project-tab" data-category="infrastructure">Infraestructura</button>
+        </div>
+
+        <!-- Asymmetric project grid dynamic container -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Content injected dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA & EDUCACIÓN TIMELINE SECTION -->
+    <section id="experience" style="background-color: var(--surface-low);">
+      <div class="container">
+        <h2 class="section-label">Experiencia & Formación</h2>
+        <h3 class="section-title" style="text-align: center; margin-bottom: var(--spacing-sm);">Trayectoria Profesional</h3>
+        <p class="section-desc" style="text-align: center; margin: 0 auto var(--spacing-xl);">Un registro constante de desarrollo profesional, hitos y aprendizaje técnico continuo.</p>
+
+        <!-- Vertical Timeline container -->
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+          <div id="timeline-items-container">
+            <!-- Content injected dynamically by script.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION WITH SIMULATOR INBOX -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-label">Protocolo de Contacto</h2>
+        <h3 class="section-title">Enviar Mensaje</h3>
+        <p class="section-desc">Abierto a propuestas de ingeniería, colaboraciones de desarrollo y consultoría de arquitectura de sistemas.</p>
+
+        <div class="contact-grid">
+          
+          <!-- Column 1: Social link cards & simulator inbox -->
+          <div class="contact-info-col">
+            
+            <div class="contact-bento-links">
+              <!-- Github link -->
+              <a href="https://github.com/arivera-dev" target="_blank" rel="noopener noreferrer" class="contact-bento-link">
+                <div class="contact-link-icon">
+                  <i data-lucide="github"></i>
+                </div>
+                <span>GitHub</span>
+              </a>
+
+              <!-- LinkedIn link -->
+              <a href="https://linkedin.com/in/alex-rivera-dev" target="_blank" rel="noopener noreferrer" class="contact-bento-link">
+                <div class="contact-link-icon">
+                  <i data-lucide="linkedin"></i>
+                </div>
+                <span>LinkedIn</span>
+              </a>
+
+              <!-- Email link -->
+              <a href="mailto:alex.rivera@dev.io" class="contact-bento-link">
+                <div class="contact-link-icon">
+                  <i data-lucide="mail"></i>
+                </div>
+                <span>Email</span>
+              </a>
+            </div>
+
+            <!-- Simulated Inbox Visualizer Console -->
+            <div class="inbox-simulator">
+              <div class="inbox-header">
+                <div class="inbox-title">
+                  <i data-lucide="eye" style="width: 14px; height: 14px;"></i>
+                  Inbox de Simulación (<span id="inbox-count-badge">0</span>)
+                </div>
+                <button class="inbox-clear" id="clear-inbox" title="Vaciar bandeja de entrada local">
+                  <i data-lucide="trash-2"></i>
+                </button>
+              </div>
+              <p class="inbox-desc">
+                Cualquier mensaje que transmitas usando el formulario se guardará localmente en el almacenamiento de tu navegador para que puedas previsualizar su recepción.
+              </p>
+              
+              <!-- Messages container -->
+              <div class="inbox-messages" id="inbox-messages">
+                <!-- Injected dynamically by script.js -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Interactive Contact Form -->
+          <div class="bento-card contact-form-card">
+            <div class="contact-form-header">
+              <span class="contact-form-title">Nueva Transmisión</span>
+              <button class="autofill-btn" id="btn-autofill-contact" type="button">
+                ⚡ Autocompletar datos
+              </button>
+            </div>
+
+            <form id="contact-form">
+              <!-- Name Input -->
+              <div class="form-group">
+                <label for="name">Nombre Completo</label>
+                <input type="text" id="name" class="form-control" placeholder="John Doe">
+                <div class="form-error" id="error-name"></div>
+              </div>
+
+              <!-- Email Input -->
+              <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" class="form-control" placeholder="john@example.com">
+                <div class="form-error" id="error-email"></div>
+              </div>
+
+              <!-- Message Textarea -->
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" rows="5" class="form-control" placeholder="Detalla los pormenores de tu propuesta o pregunta técnica..."></textarea>
+                <div class="form-error" id="error-message"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: var(--spacing-xs); width: 100%;">
+                Enviar Transmisión <i data-lucide="send" style="width: 14px; height: 14px;"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- UNIFIED PROFESSIONAL FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-meta">
+        <p>© 2026 KINETIC_SYNTAX // TODOS LOS DERECHOS RESERVADOS</p>
+        <p>Optimizado para alto rendimiento estático en producción.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/arivera-dev" target="_blank" rel="noopener noreferrer" class="footer-link">
+          <i data-lucide="github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/alex-rivera-dev" target="_blank" rel="noopener noreferrer" class="footer-link">
+          <i data-lucide="linkedin"></i> LinkedIn
+        </a>
+        <button class="btn-scroll-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Volver arriba">
+          <i data-lucide="arrow-up" style="width:14px; height:14px;"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- UNIFIED OVERLAYS MODALS CONTAINER -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <span class="modal-header-title" id="modal-header-title">
+          <!-- Injected dynamically by script.js -->
+        </span>
+        <div class="modal-actions">
+          <button class="btn btn-accent-outline btn-sm" id="print-cv-btn" style="display:none;">
+            <i data-lucide="printer" style="width:14px; height:14px;"></i> Imprimir / Guardar en PDF
+          </button>
+          <button class="modal-close" id="modal-close-btn" title="Cerrar modal">
+            <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MODAL BODY VIEWPORT -->
+      <div class="modal-body">
+        
+        <!-- Panel 1: Dynamic Projects details details (Injected by script.js) -->
+        <div id="project-modal-content" style="display:none;">
+          <!-- Injected dynamically on details request -->
+        </div>
+
+        <!-- Panel 2: Interactive Curriculum Vitae (Print CSS optimized) -->
+        <div id="cv-modal-content" class="cv-printable" style="display:none;">
+          
+          <div class="cv-header">
+            <div class="cv-personal">
+              <h1>ALEX RIVERA</h1>
+              <h2>Senior Full-Stack Engineer</h2>
+              <p>Especializado en Arquitecturas de Software de Alta Velocidad</p>
+            </div>
+            <div class="cv-contacts">
+              <a href="mailto:alex.rivera@dev.io">
+                <i data-lucide="mail"></i> alex.rivera@dev.io
+              </a>
+              <a href="https://github.com/arivera-dev" target="_blank">
+                <i data-lucide="github"></i> github.com/arivera-dev
+              </a>
+              <a href="https://linkedin.com/in/alex-rivera-dev" target="_blank">
+                <i data-lucide="linkedin"></i> linkedin.com/in/alex-rivera-dev
+              </a>
+              <span style="display:flex; align-items:center; gap:6px; color:var(--text-p);">
+                <i data-lucide="map-pin"></i> Madrid, España
+              </span>
+            </div>
+          </div>
+
+          <!-- CV Summary Bio -->
+          <div class="cv-section">
+            <span class="cv-title">Resumen Profesional</span>
+            <p class="cv-bio">
+              Ingeniero de software con más de 5 años de trayectoria profesional diseñando e implementando sistemas e interfaces web de alta velocidad. Altamente competente en TypeScript, React, Node.js y en el aprovisionamiento modular de servicios de nube optimizados. Apasionado por la arquitectura limpia y la automatización CI/CD.
+            </p>
+          </div>
+
+          <!-- CV Experience Block -->
+          <div class="cv-section">
+            <span class="cv-title">Experiencia Profesional</span>
+            
+            <div class="cv-exp-item">
+              <div class="cv-exp-header">
+                <div>
+                  <h3 class="cv-exp-role">Senior Software Engineer</h3>
+                  <span class="cv-exp-org">Core Security Labs</span>
+                </div>
+                <span class="cv-exp-period">2024 - Presente</span>
+              </div>
+              <p class="cv-exp-desc">
+                Dirección técnica de clústeres de pasarelas de seguridad cloud robustas. Incremento del throughput en un 35% y despliegue continuo modular de microservicios.
+              </p>
+              <div class="cv-exp-skills">
+                <span class="cv-exp-skill">Go</span>
+                <span class="cv-exp-skill">Kubernetes</span>
+                <span class="cv-exp-skill">Redis</span>
+                <span class="cv-exp-skill">Docker</span>
+              </div>
+            </div>
+
+            <div class="cv-exp-item" style="margin-top: 14px;">
+              <div class="cv-exp-header">
+                <div>
+                  <h3 class="cv-exp-role">Full-Stack Developer</h3>
+                  <span class="cv-exp-org">Tech Solutions Corp</span>
+                </div>
+                <span class="cv-exp-period">2021 - 2024</span>
+              </div>
+              <p class="cv-exp-desc">
+                Desarrollo integral de paneles reactivos analíticos. Migración progresiva y exitosa de monolitos PHP herencia a microservicios REST/GraphQL basados en Node.js.
+              </p>
+              <div class="cv-exp-skills">
+                <span class="cv-exp-skill">React</span>
+                <span class="cv-exp-skill">TypeScript</span>
+                <span class="cv-exp-skill">PostgreSQL</span>
+                <span class="cv-exp-skill">Next.js</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CV Education Block -->
+          <div class="cv-section">
+            <span class="cv-title">Educación</span>
+            
+            <div class="cv-exp-item">
+              <div class="cv-exp-header">
+                <div>
+                  <h3 class="cv-exp-role">MSc Cloud Architecture</h3>
+                  <span class="cv-exp-org">Advanced Technology Institute</span>
+                </div>
+                <span class="cv-exp-period">2023</span>
+              </div>
+            </div>
+
+            <div class="cv-exp-item" style="margin-top: 10px;">
+              <div class="cv-exp-header">
+                <div>
+                  <h3 class="cv-exp-role">Graduado en Ingeniería de Software</h3>
+                  <span class="cv-exp-org">Universidad Politécnica de Madrid</span>
+                </div>
+                <span class="cv-exp-period">2017 - 2021</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CV Technical Matrix -->
+          <div class="cv-section" style="margin-bottom:0;">
+            <span class="cv-title">Matriz de Habilidades</span>
+            <div class="cv-skills-grid">
+              <div class="cv-skill-tag">
+                <span class="cv-skill-name">TypeScript</span>
+                <div class="cv-skill-bar-bg"><div class="cv-skill-bar-fill" style="width:95%"></div></div>
+              </div>
+              <div class="cv-skill-tag">
+                <span class="cv-skill-name">React / Next</span>
+                <div class="cv-skill-bar-bg"><div class="cv-skill-bar-fill" style="width:92%"></div></div>
+              </div>
+              <div class="cv-skill-tag">
+                <span class="cv-skill-name">Node.js</span>
+                <div class="cv-skill-bar-bg"><div class="cv-skill-bar-fill" style="width:90%"></div></div>
+              </div>
+              <div class="cv-skill-tag">
+                <span class="cv-skill-name">DevOps / Docker</span>
+                <div class="cv-skill-bar-bg"><div class="cv-skill-bar-fill" style="width:85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- MODAL FOOTER VIEWPORT -->
+      <div class="modal-footer">
+        <span class="modal-footer-info">Kinetic Syntax CV Systems v1.0</span>
+        <button class="btn btn-outline btn-sm modal-close-action" onclick="document.getElementById('modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+          Cerrar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER ALERTS -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Lucide CDNs Icons dynamic replacement engine script -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Portfolio Engine Logic script link -->
+  <script src="script.js"></script>
+
+</body>
+</html>
